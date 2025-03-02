@@ -49,8 +49,9 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover, .nav-links li a:focus {
     color: #0071e3;
+    outline: none;
 }
 
 .hero {
@@ -86,11 +87,13 @@ body {
     font-size: 18px;
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s;
+    will-change: transform;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
     background-color: #005bb5;
     transform: scale(1.05);
+    outline: none;
 }
 
 .founders {
@@ -141,4 +144,30 @@ body {
     height: 4px;
     background: #0071e3;
     z-index: 9999;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .founders-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .founder {
+        width: 100%;
+    }
 }
