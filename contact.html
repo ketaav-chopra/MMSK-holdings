@@ -25,11 +25,20 @@
             <p>Reach out to us for inquiries and partnerships.</p>
         </section>
         <section class="contact-form">
-            <form>
-                <input type="text" placeholder="MMSK-holding" required><br>
-                <input type="email" placeholder="mmsk01958@gmail.com" required><br>
-                <textarea placeholder="Your Message" required></textarea><br>
-                <button type="submit" class="btn">Send Message</button>
+            <form action="submit-form.php" method="POST">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="MMSK-holding" required aria-label="Enter your full name"><br>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="mmsk01958@gmail.com" required aria-label="Enter your email address"><br>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required aria-label="Enter your message"></textarea><br>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </fieldset>
             </form>
         </section>
     </main>
@@ -38,4 +47,3 @@
     </footer>
 </body>
 </html>
-
