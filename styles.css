@@ -1,11 +1,10 @@
-/* Apple-style minimalistic design with enhanced animations */
+/* General Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f7;
     color: #1d1d1f;
-    text-align: center;
     transition: background 0.3s ease-in-out;
 }
 
@@ -14,6 +13,7 @@ body {
     color: #f5f5f7;
 }
 
+/* Navigation */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -21,18 +21,7 @@ body {
     padding: 20px 50px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeInDown 1s ease-out;
     transition: background 0.3s ease-in-out;
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
 }
 
 .nav-links {
@@ -54,30 +43,21 @@ body {
     outline: none;
 }
 
+/* Hero Section */
 .hero {
     margin-top: 80px;
     padding: 50px 20px;
     background: linear-gradient(to bottom, #e8e8ed, #f5f5f7);
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .hero h2 {
     font-size: 40px;
     font-weight: bold;
     opacity: 0;
-    animation: slideIn 1.5s ease-in-out forwards;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -87,23 +67,16 @@ body {
     font-size: 18px;
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s;
-    will-change: transform;
 }
 
 .btn:hover, .btn:focus {
     background-color: #005bb5;
     transform: scale(1.05);
-    outline: none;
 }
 
+/* Founders Section */
 .founders {
     padding: 40px 20px;
-    animation: fadeInUp 1.5s ease-in-out;
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .founders-list {
@@ -130,11 +103,6 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
-.founder:nth-child(1) { animation-delay: 0.2s; }
-.founder:nth-child(2) { animation-delay: 0.4s; }
-.founder:nth-child(3) { animation-delay: 0.6s; }
-.founder:nth-child(4) { animation-delay: 0.8s; }
-
 /* Progress Bar */
 .progress-bar {
     position: fixed;
@@ -146,7 +114,15 @@ body {
     z-index: 9999;
 }
 
-/* Responsive Design Enhancements */
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
