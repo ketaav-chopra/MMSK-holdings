@@ -79,3 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     backToTopButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 });
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Page loaded successfully.");
+});
+
